@@ -2,13 +2,23 @@
   "name": "stencil-storybook",
   "version": "1.0.0",
   "description": "Stencil / Storybook Starter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "collection": "dist/collection/collection-manifest.json",
+  "types": "dist/types/components.d.ts",
   "scripts": {
     "format": "prettier --write .",
     "lint:code": "eslint .",
     "lint:code:fix": "eslint --fix .",
     "lint:style": "stylelint .",
     "lint:style:fix": "stylelint --fix .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "stencil": "stencil build --watch",
+    "test": "stencil test --spec",
+    "test:watch": "stencil test --spec --watchAll"
+  },
+  "dependencies": {
+    "@stencil/core": "2.17.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
