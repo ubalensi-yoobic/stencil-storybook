@@ -1,5 +1,11 @@
 {
   "printWidth": 180,
   "singleQuote": true,
-  "trailingComma": "none"
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": [".commitlintrc", ".lintstagedrc"],
+      "options": { "parser": "json" }
+    }
+  ]
 }
