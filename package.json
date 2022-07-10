@@ -6,6 +6,8 @@
     "format": "prettier --write .",
     "lint:code": "eslint .",
     "lint:code:fix": "eslint --fix .",
+    "lint:style": "stylelint .",
+    "lint:style:fix": "stylelint --fix .",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -19,6 +21,8 @@
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
+    "stylelint": "14.9.1",
+    "stylelint-config-standard": "26.0.0",
     "typescript": "4.7.4"
   }
 }
