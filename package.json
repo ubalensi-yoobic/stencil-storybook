@@ -4,11 +4,14 @@
   "description": "Stencil / Storybook Starter",
   "scripts": {
     "format": "prettier --write .",
+    "lint:code":  "eslint .",
+    "lint:code:fix":  "eslint --fix .",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
+    "eslint": "8.19.0",
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1"
