@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Stencil / Storybook Starter",
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "husky": "8.0.1",
     "prettier": "2.7.1"
   }
 }
