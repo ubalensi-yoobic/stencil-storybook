@@ -3,7 +3,13 @@
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:jest/recommended", "prettier"],
   "env": { "browser": true, "es6": true, "node": true },
   "parserOptions": { "ecmaFeatures": { "jsx": true } },
-  "plugins": ["react"],
-  "rules": { "react/jsx-uses-react": "error", "react/jsx-uses-vars": "error", "react/react-in-jsx-scope": "error" },
+  "plugins": ["react", "simple-import-sort"],
+  "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/react-in-jsx-scope": "error",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error"
+  },
   "settings": { "react": { "pragma": "h" } }
 }
