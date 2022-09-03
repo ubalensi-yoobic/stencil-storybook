@@ -19,7 +19,7 @@
     "test:watch": "stencil test --spec --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "2.17.3"
+    "@stencil/core": "2.17.4"
   },
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
