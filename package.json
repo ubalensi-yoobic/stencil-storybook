@@ -19,7 +19,8 @@
     "test:watch": "stencil test --spec --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "3.0.1"
+    "@stencil/core": "3.0.1",
+    "story-wc-generator": "^1.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.4.4",

@@ -6,19 +6,72 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface BtnGeneral {
+        "color": string;
+        "label": string;
+    }
+    interface ComplimentPerso {
+        "adjective": string;
+        "name": string;
+    }
+    interface MyRating {
+        "color": 'orange';
+        "maxValue": 5;
+        "value": 0;
+    }
 }
 declare global {
+    interface HTMLBtnGeneralElement extends Components.BtnGeneral, HTMLStencilElement {
+    }
+    var HTMLBtnGeneralElement: {
+        prototype: HTMLBtnGeneralElement;
+        new (): HTMLBtnGeneralElement;
+    };
+    interface HTMLComplimentPersoElement extends Components.ComplimentPerso, HTMLStencilElement {
+    }
+    var HTMLComplimentPersoElement: {
+        prototype: HTMLComplimentPersoElement;
+        new (): HTMLComplimentPersoElement;
+    };
+    interface HTMLMyRatingElement extends Components.MyRating, HTMLStencilElement {
+    }
+    var HTMLMyRatingElement: {
+        prototype: HTMLMyRatingElement;
+        new (): HTMLMyRatingElement;
+    };
     interface HTMLElementTagNameMap {
+        "btn-general": HTMLBtnGeneralElement;
+        "compliment-perso": HTMLComplimentPersoElement;
+        "my-rating": HTMLMyRatingElement;
     }
 }
 declare namespace LocalJSX {
+    interface BtnGeneral {
+        "color"?: string;
+        "label"?: string;
+    }
+    interface ComplimentPerso {
+        "adjective"?: string;
+        "name"?: string;
+    }
+    interface MyRating {
+        "color"?: 'orange';
+        "maxValue"?: 5;
+        "value"?: 0;
+    }
     interface IntrinsicElements {
+        "btn-general": BtnGeneral;
+        "compliment-perso": ComplimentPerso;
+        "my-rating": MyRating;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "btn-general": LocalJSX.BtnGeneral & JSXBase.HTMLAttributes<HTMLBtnGeneralElement>;
+            "compliment-perso": LocalJSX.ComplimentPerso & JSXBase.HTMLAttributes<HTMLComplimentPersoElement>;
+            "my-rating": LocalJSX.MyRating & JSXBase.HTMLAttributes<HTMLMyRatingElement>;
         }
     }
 }
