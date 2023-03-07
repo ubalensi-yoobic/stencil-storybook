@@ -10,14 +10,35 @@ export namespace Components {
         "color": string;
         "label": string;
     }
+    interface ButtonYtb {
+        "class": string;
+    }
     interface ComplimentPerso {
         "adjective": string;
         "name": string;
     }
+    interface ImgVideo {
+        "bradius": boolean;
+        "url": string;
+    }
     interface MyRating {
-        "color": 'orange';
-        "maxValue": 5;
-        "value": 0;
+        "color": string;
+        "maxValue": number;
+        "value": number;
+    }
+    interface SliderChips {
+    }
+    interface TxtYtb {
+        "class": string;
+    }
+    interface VideoCard {
+        "time": string;
+        "url": string;
+        "videoAuthor": string;
+        "videoTitle": string;
+        "views": string;
+    }
+    interface YtbIcon {
     }
 }
 declare global {
@@ -27,11 +48,23 @@ declare global {
         prototype: HTMLBtnGeneralElement;
         new (): HTMLBtnGeneralElement;
     };
+    interface HTMLButtonYtbElement extends Components.ButtonYtb, HTMLStencilElement {
+    }
+    var HTMLButtonYtbElement: {
+        prototype: HTMLButtonYtbElement;
+        new (): HTMLButtonYtbElement;
+    };
     interface HTMLComplimentPersoElement extends Components.ComplimentPerso, HTMLStencilElement {
     }
     var HTMLComplimentPersoElement: {
         prototype: HTMLComplimentPersoElement;
         new (): HTMLComplimentPersoElement;
+    };
+    interface HTMLImgVideoElement extends Components.ImgVideo, HTMLStencilElement {
+    }
+    var HTMLImgVideoElement: {
+        prototype: HTMLImgVideoElement;
+        new (): HTMLImgVideoElement;
     };
     interface HTMLMyRatingElement extends Components.MyRating, HTMLStencilElement {
     }
@@ -39,10 +72,40 @@ declare global {
         prototype: HTMLMyRatingElement;
         new (): HTMLMyRatingElement;
     };
+    interface HTMLSliderChipsElement extends Components.SliderChips, HTMLStencilElement {
+    }
+    var HTMLSliderChipsElement: {
+        prototype: HTMLSliderChipsElement;
+        new (): HTMLSliderChipsElement;
+    };
+    interface HTMLTxtYtbElement extends Components.TxtYtb, HTMLStencilElement {
+    }
+    var HTMLTxtYtbElement: {
+        prototype: HTMLTxtYtbElement;
+        new (): HTMLTxtYtbElement;
+    };
+    interface HTMLVideoCardElement extends Components.VideoCard, HTMLStencilElement {
+    }
+    var HTMLVideoCardElement: {
+        prototype: HTMLVideoCardElement;
+        new (): HTMLVideoCardElement;
+    };
+    interface HTMLYtbIconElement extends Components.YtbIcon, HTMLStencilElement {
+    }
+    var HTMLYtbIconElement: {
+        prototype: HTMLYtbIconElement;
+        new (): HTMLYtbIconElement;
+    };
     interface HTMLElementTagNameMap {
         "btn-general": HTMLBtnGeneralElement;
+        "button-ytb": HTMLButtonYtbElement;
         "compliment-perso": HTMLComplimentPersoElement;
+        "img-video": HTMLImgVideoElement;
         "my-rating": HTMLMyRatingElement;
+        "slider-chips": HTMLSliderChipsElement;
+        "txt-ytb": HTMLTxtYtbElement;
+        "video-card": HTMLVideoCardElement;
+        "ytb-icon": HTMLYtbIconElement;
     }
 }
 declare namespace LocalJSX {
@@ -50,19 +113,46 @@ declare namespace LocalJSX {
         "color"?: string;
         "label"?: string;
     }
+    interface ButtonYtb {
+        "class"?: string;
+    }
     interface ComplimentPerso {
         "adjective"?: string;
         "name"?: string;
     }
+    interface ImgVideo {
+        "bradius"?: boolean;
+        "url"?: string;
+    }
     interface MyRating {
-        "color"?: 'orange';
-        "maxValue"?: 5;
-        "value"?: 0;
+        "color"?: string;
+        "maxValue"?: number;
+        "value"?: number;
+    }
+    interface SliderChips {
+    }
+    interface TxtYtb {
+        "class"?: string;
+    }
+    interface VideoCard {
+        "time"?: string;
+        "url"?: string;
+        "videoAuthor"?: string;
+        "videoTitle"?: string;
+        "views"?: string;
+    }
+    interface YtbIcon {
     }
     interface IntrinsicElements {
         "btn-general": BtnGeneral;
+        "button-ytb": ButtonYtb;
         "compliment-perso": ComplimentPerso;
+        "img-video": ImgVideo;
         "my-rating": MyRating;
+        "slider-chips": SliderChips;
+        "txt-ytb": TxtYtb;
+        "video-card": VideoCard;
+        "ytb-icon": YtbIcon;
     }
 }
 export { LocalJSX as JSX };
@@ -70,8 +160,14 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "btn-general": LocalJSX.BtnGeneral & JSXBase.HTMLAttributes<HTMLBtnGeneralElement>;
+            "button-ytb": LocalJSX.ButtonYtb & JSXBase.HTMLAttributes<HTMLButtonYtbElement>;
             "compliment-perso": LocalJSX.ComplimentPerso & JSXBase.HTMLAttributes<HTMLComplimentPersoElement>;
+            "img-video": LocalJSX.ImgVideo & JSXBase.HTMLAttributes<HTMLImgVideoElement>;
             "my-rating": LocalJSX.MyRating & JSXBase.HTMLAttributes<HTMLMyRatingElement>;
+            "slider-chips": LocalJSX.SliderChips & JSXBase.HTMLAttributes<HTMLSliderChipsElement>;
+            "txt-ytb": LocalJSX.TxtYtb & JSXBase.HTMLAttributes<HTMLTxtYtbElement>;
+            "video-card": LocalJSX.VideoCard & JSXBase.HTMLAttributes<HTMLVideoCardElement>;
+            "ytb-icon": LocalJSX.YtbIcon & JSXBase.HTMLAttributes<HTMLYtbIconElement>;
         }
     }
 }
