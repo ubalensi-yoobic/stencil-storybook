@@ -5,21 +5,9 @@ button {
     padding: 10px;
     font-family: sans-serif;
     border: 0;
+    width: max-content;
+    max-width: 220px;
   }
-  // button .hovertext {
-  //   visibility: hidden;
-  //   width:120px;
-  //   height: fit-content;
-  //   background-color: #585858;
-  //   color: #FFFFFF;
-  //   text-align: center;
-  //   padding: 5px 10px;
-  //   border-radius: 6px;
-  //   position: relative;
-  // }
-  // button:hover .hovertext {
-  //   visibility: visible;
-  // }
   
 .rond-r50-colored {
     border-radius: 50px;

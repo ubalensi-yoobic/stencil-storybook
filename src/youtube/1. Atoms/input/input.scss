@@ -20,19 +20,23 @@
     border: none;
   }
   
-  div:has(input:focus) {
+  // div:has(input:focus) {
 
-    max-width: 300px;
-    width: 300px;
-  }
+  //   max-width: 300px;
+  //   width: 300px;
+  // }
 
   .search {
-    max-width: 300px;
+    max-width: 572px;
+    width: 540px;
+    height: 40px;
     background-color: #121212;
     color: #888888;
     border: solid 1px #303030;
-    border-top-left-radius: 16px ;
-    border-bottom-left-radius: 16px;
+    border-top-left-radius: 40px ;
+    border-bottom-left-radius: 40px;
+    font-size: 10px;
+    font-family: Roboto, Arial, sans-serif;
   }
   .comment {
     background-color: transparent;

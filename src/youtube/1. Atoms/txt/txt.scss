@@ -1,0 +1,15 @@
+// p {
+//   object-fit: contain;
+//   }
+  :host{
+    font-family: "Roboto","Arial",sans-serif;
+    background-color: transparent;
+  }
+  :host(.title) p {
+    color: white;
+    margin: 0 0 4px 0;
+  }
+  :host(.normal) p {
+    color: rgb(119, 116, 116);
+  }
+  

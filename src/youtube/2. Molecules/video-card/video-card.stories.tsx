@@ -9,7 +9,7 @@ export default {
 };
 
 export const VideoCard = () => (
-  <div style={{backgroundColor:'#0f0f0f', padding:'20px', width:'fit-content'}}>
-    <video-card videoTitle={'Amelie Soundtrack'} videoAuthor={'SonGodess'}></video-card>
-  </div>
+    <div style={{width:'50%'}}>
+      <video-card videoTitle={'Amelie Soundtrack'} videoAuthor={'SonGodess'}></video-card>
+    </div>
   );

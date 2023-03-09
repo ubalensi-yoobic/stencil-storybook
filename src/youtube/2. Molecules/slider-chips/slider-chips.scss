@@ -1,0 +1,23 @@
+:host{
+    display: block;
+    width: 100%;
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .arrow{
+            display: flex;
+            width:"30px";
+             height:"30px";
+            color:white;
+         }
+        .tags-tab{
+        width: 100%;
+         display: flex;
+         flex-direction: row;
+         overflow: scroll;
+         gap: 10px;
+       }
+      }
+      
+}

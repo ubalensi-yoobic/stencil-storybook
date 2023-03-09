@@ -21,12 +21,22 @@ export namespace Components {
         "bradius": boolean;
         "url": string;
     }
+    interface ListCol {
+    }
+    interface LogoYtb {
+    }
     interface MyRating {
         "color": string;
         "maxValue": number;
         "value": number;
     }
+    interface RightSide {
+    }
     interface SliderChips {
+        "tags": { value: string; class: string; }[];
+    }
+    interface TooltipYtb {
+        "tooltipText": string;
     }
     interface TxtYtb {
         "class": string;
@@ -39,6 +49,14 @@ export namespace Components {
         "views": string;
     }
     interface YtbIcon {
+        "color": string;
+        "type": string;
+    }
+    interface YtbInput {
+        "class": string;
+        "placeholder": string;
+    }
+    interface YtbSearchBar {
     }
 }
 declare global {
@@ -66,17 +84,41 @@ declare global {
         prototype: HTMLImgVideoElement;
         new (): HTMLImgVideoElement;
     };
+    interface HTMLListColElement extends Components.ListCol, HTMLStencilElement {
+    }
+    var HTMLListColElement: {
+        prototype: HTMLListColElement;
+        new (): HTMLListColElement;
+    };
+    interface HTMLLogoYtbElement extends Components.LogoYtb, HTMLStencilElement {
+    }
+    var HTMLLogoYtbElement: {
+        prototype: HTMLLogoYtbElement;
+        new (): HTMLLogoYtbElement;
+    };
     interface HTMLMyRatingElement extends Components.MyRating, HTMLStencilElement {
     }
     var HTMLMyRatingElement: {
         prototype: HTMLMyRatingElement;
         new (): HTMLMyRatingElement;
     };
+    interface HTMLRightSideElement extends Components.RightSide, HTMLStencilElement {
+    }
+    var HTMLRightSideElement: {
+        prototype: HTMLRightSideElement;
+        new (): HTMLRightSideElement;
+    };
     interface HTMLSliderChipsElement extends Components.SliderChips, HTMLStencilElement {
     }
     var HTMLSliderChipsElement: {
         prototype: HTMLSliderChipsElement;
         new (): HTMLSliderChipsElement;
+    };
+    interface HTMLTooltipYtbElement extends Components.TooltipYtb, HTMLStencilElement {
+    }
+    var HTMLTooltipYtbElement: {
+        prototype: HTMLTooltipYtbElement;
+        new (): HTMLTooltipYtbElement;
     };
     interface HTMLTxtYtbElement extends Components.TxtYtb, HTMLStencilElement {
     }
@@ -96,16 +138,34 @@ declare global {
         prototype: HTMLYtbIconElement;
         new (): HTMLYtbIconElement;
     };
+    interface HTMLYtbInputElement extends Components.YtbInput, HTMLStencilElement {
+    }
+    var HTMLYtbInputElement: {
+        prototype: HTMLYtbInputElement;
+        new (): HTMLYtbInputElement;
+    };
+    interface HTMLYtbSearchBarElement extends Components.YtbSearchBar, HTMLStencilElement {
+    }
+    var HTMLYtbSearchBarElement: {
+        prototype: HTMLYtbSearchBarElement;
+        new (): HTMLYtbSearchBarElement;
+    };
     interface HTMLElementTagNameMap {
         "btn-general": HTMLBtnGeneralElement;
         "button-ytb": HTMLButtonYtbElement;
         "compliment-perso": HTMLComplimentPersoElement;
         "img-video": HTMLImgVideoElement;
+        "list-col": HTMLListColElement;
+        "logo-ytb": HTMLLogoYtbElement;
         "my-rating": HTMLMyRatingElement;
+        "right-side": HTMLRightSideElement;
         "slider-chips": HTMLSliderChipsElement;
+        "tooltip-ytb": HTMLTooltipYtbElement;
         "txt-ytb": HTMLTxtYtbElement;
         "video-card": HTMLVideoCardElement;
         "ytb-icon": HTMLYtbIconElement;
+        "ytb-input": HTMLYtbInputElement;
+        "ytb-search-bar": HTMLYtbSearchBarElement;
     }
 }
 declare namespace LocalJSX {
@@ -124,12 +184,22 @@ declare namespace LocalJSX {
         "bradius"?: boolean;
         "url"?: string;
     }
+    interface ListCol {
+    }
+    interface LogoYtb {
+    }
     interface MyRating {
         "color"?: string;
         "maxValue"?: number;
         "value"?: number;
     }
+    interface RightSide {
+    }
     interface SliderChips {
+        "tags"?: { value: string; class: string; }[];
+    }
+    interface TooltipYtb {
+        "tooltipText"?: string;
     }
     interface TxtYtb {
         "class"?: string;
@@ -142,17 +212,31 @@ declare namespace LocalJSX {
         "views"?: string;
     }
     interface YtbIcon {
+        "color"?: string;
+        "type"?: string;
+    }
+    interface YtbInput {
+        "class"?: string;
+        "placeholder"?: string;
+    }
+    interface YtbSearchBar {
     }
     interface IntrinsicElements {
         "btn-general": BtnGeneral;
         "button-ytb": ButtonYtb;
         "compliment-perso": ComplimentPerso;
         "img-video": ImgVideo;
+        "list-col": ListCol;
+        "logo-ytb": LogoYtb;
         "my-rating": MyRating;
+        "right-side": RightSide;
         "slider-chips": SliderChips;
+        "tooltip-ytb": TooltipYtb;
         "txt-ytb": TxtYtb;
         "video-card": VideoCard;
         "ytb-icon": YtbIcon;
+        "ytb-input": YtbInput;
+        "ytb-search-bar": YtbSearchBar;
     }
 }
 export { LocalJSX as JSX };
@@ -163,11 +247,17 @@ declare module "@stencil/core" {
             "button-ytb": LocalJSX.ButtonYtb & JSXBase.HTMLAttributes<HTMLButtonYtbElement>;
             "compliment-perso": LocalJSX.ComplimentPerso & JSXBase.HTMLAttributes<HTMLComplimentPersoElement>;
             "img-video": LocalJSX.ImgVideo & JSXBase.HTMLAttributes<HTMLImgVideoElement>;
+            "list-col": LocalJSX.ListCol & JSXBase.HTMLAttributes<HTMLListColElement>;
+            "logo-ytb": LocalJSX.LogoYtb & JSXBase.HTMLAttributes<HTMLLogoYtbElement>;
             "my-rating": LocalJSX.MyRating & JSXBase.HTMLAttributes<HTMLMyRatingElement>;
+            "right-side": LocalJSX.RightSide & JSXBase.HTMLAttributes<HTMLRightSideElement>;
             "slider-chips": LocalJSX.SliderChips & JSXBase.HTMLAttributes<HTMLSliderChipsElement>;
+            "tooltip-ytb": LocalJSX.TooltipYtb & JSXBase.HTMLAttributes<HTMLTooltipYtbElement>;
             "txt-ytb": LocalJSX.TxtYtb & JSXBase.HTMLAttributes<HTMLTxtYtbElement>;
             "video-card": LocalJSX.VideoCard & JSXBase.HTMLAttributes<HTMLVideoCardElement>;
             "ytb-icon": LocalJSX.YtbIcon & JSXBase.HTMLAttributes<HTMLYtbIconElement>;
+            "ytb-input": LocalJSX.YtbInput & JSXBase.HTMLAttributes<HTMLYtbInputElement>;
+            "ytb-search-bar": LocalJSX.YtbSearchBar & JSXBase.HTMLAttributes<HTMLYtbSearchBarElement>;
         }
     }
 }

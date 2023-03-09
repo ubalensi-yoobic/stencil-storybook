@@ -1,5 +1,5 @@
 import { getHostRef, registerHost, renderVdom } from '@stencil/core/internal/client';
-
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { defineCustomElements } from '../loader';
 
 defineCustomElements();
