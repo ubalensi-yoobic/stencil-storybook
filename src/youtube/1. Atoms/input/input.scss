@@ -1,0 +1,42 @@
+:host {
+    display: block;
+  }
+  
+  div {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    padding-left: 10px;
+    height: 30px;
+    transition: width 200ms, background-color 100ms;
+  }
+  
+  input,
+  input:focus {
+    width: 100%;
+    background: none;
+    color: #aaa;
+    outline: none;
+    border: none;
+  }
+  
+  div:has(input:focus) {
+
+    max-width: 300px;
+    width: 300px;
+  }
+
+  .search {
+    max-width: 300px;
+    background-color: #121212;
+    color: #888888;
+    border: solid 1px #303030;
+    border-top-left-radius: 16px ;
+    border-bottom-left-radius: 16px;
+  }
+  .comment {
+    background-color: transparent;
+    border-bottom: solid 1px #888888;
+    width:100%;
+    max-width: 100%;
+  }
