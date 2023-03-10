@@ -9,15 +9,15 @@ export default {
 };
 
 export const ChipsSlider = () => (
-  <div style={{ padding: '20px', border: '0' }}>
+  <div style={{ padding: '20px', border: '0', width:'300px'}}>
     <slider-chips
       tags={[
         { value: 'Tag1', class: 'r8-primary' },
         { value: 'Tag2', class: 'r8-secondary' },
         { value: 'Tag3', class: 'r8-secondary' },
         { value: 'Tag4', class: 'r8-secondary' },
-        { value: 'Tag4', class: 'r8-secondary' },
-        { value: 'Tag4', class: 'r8-secondary' }
+        { value: 'Tag5', class: 'r8-secondary' },
+        { value: 'Tag6', class: 'r8-secondary' }
       ]}
     ></slider-chips>
   </div>
