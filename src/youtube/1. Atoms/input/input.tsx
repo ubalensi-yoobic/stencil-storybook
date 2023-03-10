@@ -1,4 +1,3 @@
-
 import { Component, h, Prop } from '@stencil/core';
 
 @Component({
@@ -8,11 +7,11 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class InputYTB {
   @Prop() placeholder: string;
-  @Prop() class: string;
+  @Prop() type: string;
 
   render() {
     return (
-      <div class={this.class}>
+      <div class={this.type}>
         <input placeholder={this.placeholder}></input>
       </div>
     );

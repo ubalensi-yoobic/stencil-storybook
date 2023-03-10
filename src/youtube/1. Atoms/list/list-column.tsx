@@ -6,10 +6,9 @@ import { Component, h } from '@stencil/core';
   shadow: true
 })
 export class ListColumn {
-
   render() {
     return (
-      <div class='list-column'>
+      <div class="list-column">
         <slot />
       </div>
     );

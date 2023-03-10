@@ -1,17 +1,16 @@
-import { Component, h,Prop } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'button-ytb',
   styleUrl: 'button.scss',
   shadow: true
 })
-
 export class ButtonYTB {
-@Prop() class:string;
+  @Prop() type: string;
 
   render() {
     return (
-      <button class={this.class}>
+      <button class={this.type}>
         <slot />
       </button>
     );

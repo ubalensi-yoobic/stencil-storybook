@@ -8,5 +8,4 @@ export default {
   }
 };
 
-export const Icon = (args) => (
-  <ytb-icon  type={'bi bi-search'}></ytb-icon>)
+export const Icon = () => <ytb-icon type={'bi bi-search'}></ytb-icon>;

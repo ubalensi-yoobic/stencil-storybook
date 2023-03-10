@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  flex-direction: row;
+}
+.fixed-navbar {
+  width: 100%;
+  height: 56px;
+  position: fixed;
+  top: 0;
+  background-color: #0f0f0f;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  .left-group {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+  };
+  .middle-group {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+  };
+  .right-group {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+  };
+}

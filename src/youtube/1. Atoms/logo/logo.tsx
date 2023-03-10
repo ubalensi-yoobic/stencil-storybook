@@ -6,7 +6,6 @@ import { Component, h } from '@stencil/core';
   shadow: true
 })
 export class LogoYtb {
-
   render() {
     return (
       <div class='logo'>

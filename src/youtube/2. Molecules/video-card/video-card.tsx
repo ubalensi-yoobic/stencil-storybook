@@ -17,7 +17,7 @@ import { Component, h, Host, Prop } from '@stencil/core';
     render() {
       return (
         <Host>
-            <img-video bradius={true} url={this.url} style={{marginRight:'8px', height:'94px', width:'168px'}}></img-video>
+            <img-ytb type={'ytb-thunmail'} url={this.url} style={{marginRight:'8px', height:'94px', width:'168px'}}></img-ytb>
             <div class='vinfo'>
                 <txt-ytb class={'title'}  style={{ fontSize: '1.2rem',lineSize:'1',fontWeight: '500'}}>{this.videoTitle}</txt-ytb>
                 <txt-ytb class={'normal'} style={{ fontSize: '20',lineSize:'1',fontWeight: '400'}} >{this.videoAuthor}</txt-ytb>

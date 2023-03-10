@@ -9,9 +9,9 @@ export default {
 };
 
 export const Input = () => (
-  <div style={{width:'500px'}}>
+  <div style={{ width: '500px' }}>
     <ytb-input placeholder={'basic'}></ytb-input>
-    <ytb-input class={'search'} placeholder={'search'}></ytb-input>
-    <ytb-input class={'comment'} placeholder={'comment'}></ytb-input>
+    <ytb-input type={'search'} placeholder={'search'}></ytb-input>
+    <ytb-input type={'comment'} placeholder={'comment'}></ytb-input>
   </div>
 );

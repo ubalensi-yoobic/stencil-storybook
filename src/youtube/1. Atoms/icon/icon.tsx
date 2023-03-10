@@ -1,4 +1,3 @@
-
 import { Component, h, Prop } from '@stencil/core';
 
 @Component({
@@ -7,10 +6,10 @@ import { Component, h, Prop } from '@stencil/core';
   scoped: true
 })
 export class GhIcon {
-  @Prop({ reflect: true }) type: string;
+  @Prop() type: string;
   @Prop() color = 'red';
 
   render() {
-   return <i class={this.type} color={this.color}></i>
+    return <i class={this.type} color={this.color}></i>;
   }
 }

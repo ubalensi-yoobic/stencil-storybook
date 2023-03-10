@@ -1,0 +1,37 @@
+.video-body {
+  max-width: 1280px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .video-info {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    .video-title {
+      font-size: '20px';
+    }
+    .details {
+      display: flex;
+      flex-direction: row;
+      .author-container {
+        display: flex;
+        flex-direction: row;
+        .author-info{
+            display: flex;
+            flex-direction: column;
+        }
+      }
+      .video-reaction {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    .description {
+      background-color: #2e2e2e;
+      border-radius: 5px;
+      width: 100%;
+      height: fit-content;
+    }
+  }
+}
