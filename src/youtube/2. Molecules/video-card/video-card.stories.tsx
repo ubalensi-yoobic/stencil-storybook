@@ -9,7 +9,5 @@ export default {
 };
 
 export const VideoCard = () => (
-    <div style={{width:'50%'}}>
       <video-card videoTitle={'Amelie Soundtrack'} videoAuthor={'SonGodess'}></video-card>
-    </div>
   );

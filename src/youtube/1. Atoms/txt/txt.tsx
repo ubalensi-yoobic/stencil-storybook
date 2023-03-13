@@ -6,7 +6,7 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true
 })
 export class TextYTB {
-  @Prop() class: string;
+  @Prop({ reflect: true }) type: string;
 
   render() {
     return (

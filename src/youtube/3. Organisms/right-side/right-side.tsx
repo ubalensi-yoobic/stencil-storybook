@@ -11,12 +11,12 @@ export class RightSide {
       <list-col>
         <slider-chips
           tags={[
-            { value: 'Tout', class: 'r8-primary' },
-            { value: 'Bande-son', class: 'r8-secondary' },
-            { value: 'Musique classique', class: 'r8-secondary' },
-            { value: 'Vidéos similaires', class: 'r8-secondary' },
-            { value: 'Vidéos mise en ligne récemment', class: 'r8-secondary' },
-            { value: 'Regardées', class: 'r8-secondary' },
+            'Tout',
+             'Bande-son',
+            'Musique classique',
+            'Vidéos similaires',
+             'Vidéos mise en ligne récemment',
+           'Regardées', 
           ]}
         ></slider-chips>
         <list-col class="list-video">

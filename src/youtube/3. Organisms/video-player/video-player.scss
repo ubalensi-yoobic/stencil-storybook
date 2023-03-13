@@ -4,6 +4,15 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  img-ytb {
+    max-height: 720px;
+    max-width: 1280px;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+  }
   .video-info {
     margin-top: 12px;
     display: flex;
@@ -17,12 +26,20 @@
       .author-container {
         display: flex;
         flex-direction: row;
-        .author-info{
-            display: flex;
-            flex-direction: column;
+
+        img-ytb {
+          height: 40px;
+          width: 40px;
+          border-radius: 100%;
+          margin: 0 10px;
+        }
+        .author-info {
+          display: flex;
+          flex-direction: column;
         }
       }
       .video-reaction {
+        gap: 10px;
         display: flex;
         flex-direction: row;
       }

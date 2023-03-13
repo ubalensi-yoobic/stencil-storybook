@@ -8,9 +8,9 @@ import { Component, h, Prop } from '@stencil/core';
 export class ImageYTB {
   @Prop() url =
     'https://i.ytimg.com/vi/HGl75kurxok/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFTyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhmIGYoZjAP&rs=AOn4CLADTwOQRan2heX1fz9sfS6vjph2Dg';
-  @Prop() type = '';
+  @Prop({ reflect: true }) role: string;
 
   render() {
-    return <img class={this.type} src={this.url} alt="img" />;
+    return <img src={this.url} alt="img" />;
   }
 }

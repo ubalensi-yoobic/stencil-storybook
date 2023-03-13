@@ -6,9 +6,10 @@ import { Component, h, Prop, State } from '@stencil/core';
   shadow: true
 })
 export class Slider {
-  @Prop() tags = [{ value: 'tag1', class: 'class' }];
+  @Prop() tags = ['tag1'];
   @State() rightEnd = false;
   @State() leftEnd = true;
+  @State() selectedTag = 0;
 
   tagsTab!: HTMLElement;
 
@@ -27,21 +28,22 @@ export class Slider {
     });
   }
 
+
   render() {
     return (
       <div class="wrapper">
         <div class={this.leftEnd ? 'no-arrow' : 'arrow'}>
-          <button-ytb type={'rond-r50-transparent'} onClick={() => this.scrollTagsTab('left')}>
+          <button-ytb type={'rond-transparent'} onClick={() => this.scrollTagsTab('left')}>
             <ytb-icon type={'bi bi-chevron-left'}></ytb-icon>
           </button-ytb>
         </div>
         <div class={'tags-tab'} ref={(el) => (this.tagsTab = el as HTMLElement)} onScroll={() => this.atTheEnd()}>
-          {this.tags.map((item) => (
-            <button-ytb type={item.class}>{item.value}</button-ytb>
+          {this.tags.map((item,index) => (
+            <button-ytb type={index === this.selectedTag?'r8 primary' : 'r8 secondary'} onClick={() => this.selectedTag=index}>{item}</button-ytb>
           ))}
         </div>
         <div class={this.rightEnd ? 'no-arrow' : 'arrow'}>
-          <button-ytb type={'rond-r50-transparent'} onClick={() => this.scrollTagsTab('right')}>
+          <button-ytb type={'rond-transparent'} onClick={() => this.scrollTagsTab('right')}>
             <ytb-icon type={'bi bi-chevron-right'}></ytb-icon>
           </button-ytb>
         </div>

@@ -1,15 +1,15 @@
 button {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: baseline;
   padding: 10px;
   font-family: sans-serif;
   border: 0;
-  // width: max-content;
+  width: max-content;
   // max-width: 220px;
 }
 
-.rond-r50-colored {
+.rond-colored {
   border-radius: 50px;
   background-color: #181818;
   color: #ffffff;
@@ -17,10 +17,10 @@ button {
   width: 40px;
   align-content: center;
 }
-.rond-r50-colored:hover {
+.rond-colored:hover {
   background-color: #636262;
 }
-.rond-r50-transparent {
+.rond-transparent {
   border-radius: 50px;
   background-color: transparent;
   color: #ffffff;
@@ -28,37 +28,25 @@ button {
   width: 40px;
   align-content: center;
 }
-.rond-r50-transparent:hover {
+.rond-transparent:hover {
   background-color: #494848;
 }
-.r8-secondary {
-  border-radius: 8px;
+
+.r8{border-radius: 8px;}
+.secondary {
   background-color: #272727;
   color: #ffffff;
 }
-.r8-secondary:hover {
+.secondary:hover {
   background-color: #414040;
 }
-
-.r8-primary {
-  border-radius: 8px;
+.primary {
   background-color: #f1f1f1;
   color: #0f0f0f;
 }
 
-.r16-secondary {
+.r16 {
   border-radius: 16px;
-  background-color: #272727;
-  color: #ffffff;
-}
-.r16-secondary:hover {
-  background-color: #414040;
-}
-
-.r16-primary {
-  border-radius: 16px;
-  background-color: #f1f1f1;
-  color: #0f0f0f;
 }
 
 .right-r16-solid-border {

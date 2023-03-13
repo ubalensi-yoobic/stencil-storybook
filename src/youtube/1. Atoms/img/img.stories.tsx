@@ -22,14 +22,14 @@ export const Image = () => (
       </div>
       <p>test class</p>
       <div style={{ justifyContent: 'space-between', backgroundColor: 'bisque' }}>
-        <img-ytb type="ytb-thunmail"></img-ytb>
-        <img-ytb type="video"></img-ytb>
+        <img-ytb role="ytb-thumbnail"></img-ytb>
+        <img-ytb role="video"></img-ytb>
       </div>
     </div>
     <div style={{ width: '200px', height: '150px', justifyContent: 'space-between', backgroundColor: 'bisque' }}>
       <p>avatar</p>
-      <img-ytb type="smaller avatar"></img-ytb>
-      <img-ytb type="avatar"></img-ytb>
+      <img-ytb role="smaller avatar"></img-ytb>
+      <img-ytb role="avatar"></img-ytb>
     </div>
   </div>
 );

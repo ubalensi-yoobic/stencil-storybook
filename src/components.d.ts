@@ -18,7 +18,7 @@ export namespace Components {
         "name": string;
     }
     interface ImgYtb {
-        "type": string;
+        "role": string;
         "url": string;
     }
     interface ListCol {
@@ -35,13 +35,10 @@ export namespace Components {
     interface RightSide {
     }
     interface SliderChips {
-        "tags": { value: string; class: string; }[];
-    }
-    interface TooltipYtb {
-        "tooltipText": string;
+        "tags": string[];
     }
     interface TxtYtb {
-        "class": string;
+        "type": string;
     }
     interface VideoCard {
         "time": string;
@@ -124,12 +121,6 @@ declare global {
         prototype: HTMLSliderChipsElement;
         new (): HTMLSliderChipsElement;
     };
-    interface HTMLTooltipYtbElement extends Components.TooltipYtb, HTMLStencilElement {
-    }
-    var HTMLTooltipYtbElement: {
-        prototype: HTMLTooltipYtbElement;
-        new (): HTMLTooltipYtbElement;
-    };
     interface HTMLTxtYtbElement extends Components.TxtYtb, HTMLStencilElement {
     }
     var HTMLTxtYtbElement: {
@@ -177,7 +168,6 @@ declare global {
         "nav-ytb": HTMLNavYtbElement;
         "right-side": HTMLRightSideElement;
         "slider-chips": HTMLSliderChipsElement;
-        "tooltip-ytb": HTMLTooltipYtbElement;
         "txt-ytb": HTMLTxtYtbElement;
         "video-card": HTMLVideoCardElement;
         "video-player": HTMLVideoPlayerElement;
@@ -199,7 +189,7 @@ declare namespace LocalJSX {
         "name"?: string;
     }
     interface ImgYtb {
-        "type"?: string;
+        "role"?: string;
         "url"?: string;
     }
     interface ListCol {
@@ -216,13 +206,10 @@ declare namespace LocalJSX {
     interface RightSide {
     }
     interface SliderChips {
-        "tags"?: { value: string; class: string; }[];
-    }
-    interface TooltipYtb {
-        "tooltipText"?: string;
+        "tags"?: string[];
     }
     interface TxtYtb {
-        "class"?: string;
+        "type"?: string;
     }
     interface VideoCard {
         "time"?: string;
@@ -254,7 +241,6 @@ declare namespace LocalJSX {
         "nav-ytb": NavYtb;
         "right-side": RightSide;
         "slider-chips": SliderChips;
-        "tooltip-ytb": TooltipYtb;
         "txt-ytb": TxtYtb;
         "video-card": VideoCard;
         "video-player": VideoPlayer;
@@ -277,7 +263,6 @@ declare module "@stencil/core" {
             "nav-ytb": LocalJSX.NavYtb & JSXBase.HTMLAttributes<HTMLNavYtbElement>;
             "right-side": LocalJSX.RightSide & JSXBase.HTMLAttributes<HTMLRightSideElement>;
             "slider-chips": LocalJSX.SliderChips & JSXBase.HTMLAttributes<HTMLSliderChipsElement>;
-            "tooltip-ytb": LocalJSX.TooltipYtb & JSXBase.HTMLAttributes<HTMLTooltipYtbElement>;
             "txt-ytb": LocalJSX.TxtYtb & JSXBase.HTMLAttributes<HTMLTxtYtbElement>;
             "video-card": LocalJSX.VideoCard & JSXBase.HTMLAttributes<HTMLVideoCardElement>;
             "video-player": LocalJSX.VideoPlayer & JSXBase.HTMLAttributes<HTMLVideoPlayerElement>;

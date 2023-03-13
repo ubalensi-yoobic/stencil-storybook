@@ -9,8 +9,8 @@ export default {
 };
 
 export const Text = () => (
-  <div style={{backgroundColor:'#0f0f0f',width:'200px', height:'200px'}}>
-    <txt-ytb class={'title'}>Amelie soundtrack</txt-ytb>
-    <txt-ytb class={'normal'}>authorX</txt-ytb>
+  <div>
+    <txt-ytb type={'title'}>Amelie soundtrack</txt-ytb>
+    <txt-ytb type={'normal'}>authorX</txt-ytb>
   </div>
   );

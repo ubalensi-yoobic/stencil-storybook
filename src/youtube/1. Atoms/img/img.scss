@@ -1,32 +1,32 @@
 :host {
   display: block;
-  max-width: 100%;
-  height: auto;
-  .ytb-thunmail {
-    display: block;
-    height: 94px;
-    width: 168px;
-    position: relative;
-    flex: none;
-    border-radius: 7px;
-  }
-  .avatar {
-    display: flex;
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-  }
+  overflow: hidden;
+ img{
+  width: 100%;
+
+ }
   .smaller {
     height: 32px;
     width: 32px;
   }
-  .video {
-    display: block;
-    max-height: 720px;
-    max-width: 1280px;
-    height: 100%;
-    width: 100%;
-    border-radius: 0;
-    position: relative;
-  }
+  
+}
+:host([role='video']) {
+  max-height: 720px;
+  max-width: 1280px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  position: relative;
+}
+:host([role='ytb-thumbnail']){
+  height: 94px;
+  width: 168px;
+  border-radius: 7px;
+}
+
+:host([role='avatar']) {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
 }

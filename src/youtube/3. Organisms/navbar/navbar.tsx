@@ -10,7 +10,7 @@ export class NavbarYTB {
     return (
       <div class={'fixed-navbar'}>
         <div class={'left-group'}>
-          <button-ytb type={'rond-r50-transparent'}>
+          <button-ytb type={'rond-transparent'}>
             <ytb-icon type={'bi bi-list'} color={'white'}></ytb-icon>
           </button-ytb>
           <logo-ytb>
@@ -32,18 +32,18 @@ export class NavbarYTB {
         </div>
         <div class={'middle-group'}>
           <ytb-search-bar></ytb-search-bar>
-          <button-ytb type={'rond-r50-colored'}>
+          <button-ytb type={'rond-colored'}>
             <ytb-icon type={'bi bi-mic-fill'} color={'white'}></ytb-icon>
           </button-ytb>
         </div>
         <div class={'right-group'}>
-          <button-ytb type={'rond-r50-colored'}>
+          <button-ytb type={'rond-colored'}>
             <ytb-icon type={'bi bi-bell'} color={'white'}></ytb-icon>
           </button-ytb>
-          <button-ytb type={'rond-r50-colored'}>
+          <button-ytb type={'rond-colored'}>
             <ytb-icon type={'bi bi-camera-video'} color={'white'}></ytb-icon>
           </button-ytb>
-          <img-ytb type="avatar"></img-ytb>
+          <img-ytb url={'https://yt3.ggpht.com/ytc/AL5GRJW963eXLYQQTSDq7yvw_5OmeVvZbO1lP8RlMKNFYxkcK6dRtfbpiewhNoeRF2bB=s88-c-k-c0x00ffffff-no-rj-mo'}></img-ytb>
         </div>
       </div>
     );

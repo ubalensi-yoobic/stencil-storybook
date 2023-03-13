@@ -1,3 +1,17 @@
 :host {
     display: block;
+    .search-bar-container{
+        display:flex;
+        flex-direction: row;
+        max-width: 644px;
+        height: 40px;
+    }
+    button-ytb {
+        height: 40px;
+        width: 32px;
+    }
+    ytb-input {
+        width: 540px;
+    }
+    
 }

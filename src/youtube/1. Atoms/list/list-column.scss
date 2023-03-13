@@ -1,6 +1,9 @@
-.list-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: space-around;
+:host {
+  display: block;
+  .list-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+  }
 }
