@@ -28,8 +28,7 @@ export const Image = () => (
     </div>
     <div style={{ width: '200px', height: '150px', justifyContent: 'space-between', backgroundColor: 'bisque' }}>
       <p>avatar</p>
-      <img-ytb role="smaller avatar"></img-ytb>
-      <img-ytb role="avatar"></img-ytb>
+      <img-ytb url={'https://yt3.ggpht.com/ytc/AL5GRJV8fYsg6A8-M5JY6E3GRlT1OHf-4PhpuQRcDTrb9T0=s48-c-k-c0x00ffffff-no-rj'} role="avatar"></img-ytb>
     </div>
   </div>
 );

@@ -1,0 +1,45 @@
+:host {
+  display: block;
+  width: fit-content;
+  position: relative;
+  div:hover .icons-overlay {
+    opacity:1;
+  }
+  .icons-overlay{
+    opacity:0;
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    height:18px;
+    padding:  3px 3px 2px 3px;
+    margin: 2px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+ 
+  p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3px 4px;
+    height: 12px;
+    font-size: 11px;
+    line-height: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: white;
+    border-radius: 4px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2px;
+  }
+  img-ytb {
+    height: 94px;
+    width: 168px;
+    border-radius: 7px;
+  }
+}

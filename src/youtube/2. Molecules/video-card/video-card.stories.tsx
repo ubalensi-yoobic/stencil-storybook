@@ -9,5 +9,5 @@ export default {
 };
 
 export const VideoCard = () => (
-      <video-card videoTitle={'Amelie Soundtrack'} videoAuthor={'SonGodess'}></video-card>
+      <video-card></video-card>
   );
