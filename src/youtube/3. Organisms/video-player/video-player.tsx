@@ -16,7 +16,7 @@ export class PlayerVideoYTB {
           </txt-ytb>
           <div class={'details'} style={{ display: 'flex', flexDirection: 'row', margin: '10px', justifyContent: 'space-between' }}>
             <div class={'author-container'} style={{ display: 'flex', flexDirection: 'row', margin: '10px', alignItems: 'center' }}>
-              <img-ytb></img-ytb>
+              <img-ytb url={'https://yt3.ggpht.com/ytc/AL5GRJV8fYsg6A8-M5JY6E3GRlT1OHf-4PhpuQRcDTrb9T0=s48-c-k-c0x00ffffff-no-rj'}></img-ytb>
               <div class={'author-info'} style={{ display: 'flex', flexDirection: 'column', margin: '0 10px' }}>
                 <txt-ytb type={'title'}>Lays Alexandre</txt-ytb>
                 <txt-ytb type={'normal'}>1,61 k abonnees</txt-ytb>

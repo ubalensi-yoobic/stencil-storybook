@@ -1,4 +1,4 @@
-import { Component, h, Prop, State } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'slider-chips',
@@ -11,11 +11,12 @@ export class Slider {
   @State() leftEnd = true;
   @State() selectedTag = 0;
 
+  @Event() selected: EventEmitter<string>;
   tagsTab!: HTMLElement;
 
   readonly scrollAmount = 100;
 
-  atTheEnd(){
+  atTheEnd() {
     this.rightEnd = Math.abs(this.tagsTab.scrollWidth - this.tagsTab.clientWidth - this.tagsTab.scrollLeft) < 10;
     this.leftEnd = this.tagsTab.scrollLeft < 1;
   }
@@ -24,10 +25,9 @@ export class Slider {
     this.tagsTab.scrollBy({
       top: 0,
       left: direction === 'right' ? this.scrollAmount : -this.scrollAmount,
-      behavior:'smooth',
+      behavior: 'smooth'
     });
   }
-
 
   render() {
     return (
@@ -38,8 +38,10 @@ export class Slider {
           </button-ytb>
         </div>
         <div class={'tags-tab'} ref={(el) => (this.tagsTab = el as HTMLElement)} onScroll={() => this.atTheEnd()}>
-          {this.tags.map((item,index) => (
-            <button-ytb type={index === this.selectedTag?'r8 primary' : 'r8 secondary'} onClick={() => this.selectedTag=index}>{item}</button-ytb>
+          {this.tags.map((item, index) => (
+            <button-ytb type={index === this.selectedTag ? 'r8 primary' : 'r8 secondary'} onClick={() => ((this.selectedTag = index), this.selected.emit(item))}>
+              {item}
+            </button-ytb>
           ))}
         </div>
         <div class={this.rightEnd ? 'no-arrow' : 'arrow'}>

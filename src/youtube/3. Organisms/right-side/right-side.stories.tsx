@@ -2,11 +2,51 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Organisms/RightSide',
-  component: 'list-column',
+  component: 'right-side',
   parameters: {
     viewmode: 'story'
   }
 };
 
 export const RightSide = () => (
-    <right-side></right-side>);
+  <right-side
+    Videos={[
+      {
+        url: 'https://i.ytimg.com/vi/HGl75kurxok/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFTyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhmIGYoZjAP&rs=AOn4CLADTwOQRan2heX1fz9sfS6vjph2Dg',
+        title: 'Title',
+        author: 'Author',
+        views: '400k',
+        posted: '1 month',
+        tags: ['Tout', 'Regardées']
+      },{
+        url: 'https://i.ytimg.com/vi/HGl75kurxok/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFTyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhmIGYoZjAP&rs=AOn4CLADTwOQRan2heX1fz9sfS6vjph2Dg',
+        title: 'Bande-son',
+        author: 'Author',
+        views: '400k',
+        posted: '1 month',
+        tags: ['Tout', 'Bande-son', 'Regardées']
+      }, {
+        url: 'https://i.ytimg.com/vi/HGl75kurxok/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFTyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhmIGYoZjAP&rs=AOn4CLADTwOQRan2heX1fz9sfS6vjph2Dg',
+        title: 'Musique classique',
+        author: 'Author',
+        views: '400k',
+        posted: '1 month',
+        tags: ['Tout', 'Musique classique']
+      },{
+        url: 'https://i.ytimg.com/vi/HGl75kurxok/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFTyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhmIGYoZjAP&rs=AOn4CLADTwOQRan2heX1fz9sfS6vjph2Dg',
+        title: 'Vidéos similaires',
+        author: 'Author',
+        views: '400k',
+        posted: '1 month',
+        tags: ['Tout', 'Vidéos similaires','Musique classique']
+      },{
+        url: 'https://i.ytimg.com/vi/HGl75kurxok/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFTyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhmIGYoZjAP&rs=AOn4CLADTwOQRan2heX1fz9sfS6vjph2Dg',
+        title: 'Récemment',
+        author: 'Author',
+        views: '400k',
+        posted: '1 month',
+        tags: ['Tout', 'Vidéos mise en ligne récemment','Vidéos similaires']
+      }
+    ]}
+  ></right-side>
+);

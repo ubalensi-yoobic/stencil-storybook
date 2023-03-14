@@ -13,9 +13,16 @@ export namespace Components {
     interface ButtonYtb {
         "type": string;
     }
+    interface ComContainer {
+        "commentInfos": { avatar: string; author: string; content: string; like: string; dislike: string; posted: string; };
+    }
     interface ComplimentPerso {
         "adjective": string;
         "name": string;
+    }
+    interface ImgAnnotated {
+        "time": string;
+        "url": string;
     }
     interface ImgYtb {
         "role": string;
@@ -33,6 +40,18 @@ export namespace Components {
     interface NavYtb {
     }
     interface RightSide {
+        "Tags": string[];
+        "Videos": [
+    {
+      url: 'https://i.ytimg.com/vi/HGl75kurxok/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFTyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhmIGYoZjAP&rs=AOn4CLADTwOQRan2heX1fz9sfS6vjph2Dg',
+      title: 'Title',
+      author: 'Author',
+      views: '400k',
+      posted: '1 month',
+      tags: string[],
+      duration: '38:13:05',
+    }
+  ];
     }
     interface SliderChips {
         "tags": string[];
@@ -41,11 +60,7 @@ export namespace Components {
         "type": string;
     }
     interface VideoCard {
-        "time": string;
-        "url": string;
-        "videoAuthor": string;
-        "videoTitle": string;
-        "views": string;
+        "videoInfos": { url: string; title: string; author: string; views: string; posted: string; tags: string[]; duration: string; };
     }
     interface VideoPlayer {
     }
@@ -60,6 +75,10 @@ export namespace Components {
     interface YtbSearchBar {
     }
 }
+export interface SliderChipsCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLSliderChipsElement;
+}
 declare global {
     interface HTMLBtnGeneralElement extends Components.BtnGeneral, HTMLStencilElement {
     }
@@ -73,11 +92,23 @@ declare global {
         prototype: HTMLButtonYtbElement;
         new (): HTMLButtonYtbElement;
     };
+    interface HTMLComContainerElement extends Components.ComContainer, HTMLStencilElement {
+    }
+    var HTMLComContainerElement: {
+        prototype: HTMLComContainerElement;
+        new (): HTMLComContainerElement;
+    };
     interface HTMLComplimentPersoElement extends Components.ComplimentPerso, HTMLStencilElement {
     }
     var HTMLComplimentPersoElement: {
         prototype: HTMLComplimentPersoElement;
         new (): HTMLComplimentPersoElement;
+    };
+    interface HTMLImgAnnotatedElement extends Components.ImgAnnotated, HTMLStencilElement {
+    }
+    var HTMLImgAnnotatedElement: {
+        prototype: HTMLImgAnnotatedElement;
+        new (): HTMLImgAnnotatedElement;
     };
     interface HTMLImgYtbElement extends Components.ImgYtb, HTMLStencilElement {
     }
@@ -160,7 +191,9 @@ declare global {
     interface HTMLElementTagNameMap {
         "btn-general": HTMLBtnGeneralElement;
         "button-ytb": HTMLButtonYtbElement;
+        "com-container": HTMLComContainerElement;
         "compliment-perso": HTMLComplimentPersoElement;
+        "img-annotated": HTMLImgAnnotatedElement;
         "img-ytb": HTMLImgYtbElement;
         "list-col": HTMLListColElement;
         "logo-ytb": HTMLLogoYtbElement;
@@ -184,9 +217,16 @@ declare namespace LocalJSX {
     interface ButtonYtb {
         "type"?: string;
     }
+    interface ComContainer {
+        "commentInfos"?: { avatar: string; author: string; content: string; like: string; dislike: string; posted: string; };
+    }
     interface ComplimentPerso {
         "adjective"?: string;
         "name"?: string;
+    }
+    interface ImgAnnotated {
+        "time"?: string;
+        "url"?: string;
     }
     interface ImgYtb {
         "role"?: string;
@@ -204,19 +244,28 @@ declare namespace LocalJSX {
     interface NavYtb {
     }
     interface RightSide {
+        "Tags"?: string[];
+        "Videos"?: [
+    {
+      url: 'https://i.ytimg.com/vi/HGl75kurxok/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFTyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhmIGYoZjAP&rs=AOn4CLADTwOQRan2heX1fz9sfS6vjph2Dg',
+      title: 'Title',
+      author: 'Author',
+      views: '400k',
+      posted: '1 month',
+      tags: string[],
+      duration: '38:13:05',
+    }
+  ];
     }
     interface SliderChips {
+        "onSelected"?: (event: SliderChipsCustomEvent<string>) => void;
         "tags"?: string[];
     }
     interface TxtYtb {
         "type"?: string;
     }
     interface VideoCard {
-        "time"?: string;
-        "url"?: string;
-        "videoAuthor"?: string;
-        "videoTitle"?: string;
-        "views"?: string;
+        "videoInfos"?: { url: string; title: string; author: string; views: string; posted: string; tags: string[]; duration: string; };
     }
     interface VideoPlayer {
     }
@@ -233,7 +282,9 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "btn-general": BtnGeneral;
         "button-ytb": ButtonYtb;
+        "com-container": ComContainer;
         "compliment-perso": ComplimentPerso;
+        "img-annotated": ImgAnnotated;
         "img-ytb": ImgYtb;
         "list-col": ListCol;
         "logo-ytb": LogoYtb;
@@ -255,7 +306,9 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "btn-general": LocalJSX.BtnGeneral & JSXBase.HTMLAttributes<HTMLBtnGeneralElement>;
             "button-ytb": LocalJSX.ButtonYtb & JSXBase.HTMLAttributes<HTMLButtonYtbElement>;
+            "com-container": LocalJSX.ComContainer & JSXBase.HTMLAttributes<HTMLComContainerElement>;
             "compliment-perso": LocalJSX.ComplimentPerso & JSXBase.HTMLAttributes<HTMLComplimentPersoElement>;
+            "img-annotated": LocalJSX.ImgAnnotated & JSXBase.HTMLAttributes<HTMLImgAnnotatedElement>;
             "img-ytb": LocalJSX.ImgYtb & JSXBase.HTMLAttributes<HTMLImgYtbElement>;
             "list-col": LocalJSX.ListCol & JSXBase.HTMLAttributes<HTMLListColElement>;
             "logo-ytb": LocalJSX.LogoYtb & JSXBase.HTMLAttributes<HTMLLogoYtbElement>;
