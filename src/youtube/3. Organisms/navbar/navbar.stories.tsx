@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Organisms/Navbar',
-  component: 'navbar',
+  component: 'nav-ytb',
   parameters: {
     viewmode: 'story'
   }

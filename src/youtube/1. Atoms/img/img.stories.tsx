@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Atoms/Image',
-  component: 'img',
+  component: 'img-ytb',
   parameters: {
     viewmode: 'story'
   },

@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Atoms/Button',
-  component: 'button',
+  component: 'button-ytb',
   parameters: {
     viewmode: 'story'
   }

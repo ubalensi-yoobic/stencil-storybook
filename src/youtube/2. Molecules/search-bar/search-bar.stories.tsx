@@ -3,7 +3,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Molecules/SearchBar',
-  component: 'search-bar',
+  component: 'ytb-search-bar',
   parameters: {
     viewmode: 'story'
   }

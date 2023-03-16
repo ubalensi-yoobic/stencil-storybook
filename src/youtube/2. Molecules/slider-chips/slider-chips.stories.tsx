@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Molecules/ChipsSlider',
-  component: 'chips-slider',
+  component: 'slider-chips',
   parameters: {
     viewmode: 'story'
   }

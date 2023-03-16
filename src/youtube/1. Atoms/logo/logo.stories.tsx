@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Atoms/Logo',
-  component: 'logo',
+  component: 'logo-ytb',
   parameters: {
     viewmode: 'story'
   },

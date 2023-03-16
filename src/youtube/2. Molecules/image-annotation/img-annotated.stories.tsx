@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Molecules/ImgAnnotated',
-  component: 'annotated-img',
+  component: 'img-annotated',
   parameters: {
     viewmode: 'story'
   }

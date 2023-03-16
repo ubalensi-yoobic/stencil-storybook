@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Organisms/VideoPlayer',
-  component: 'navbar',
+  component: 'video-player',
   parameters: {
     viewmode: 'story'
   }

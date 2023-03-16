@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  background-color: #000000;
+  
+  main {
+    display: flex;
+    flex-direction: row;
+    border-top: solid 30px #000000;
+    border-bottom: solid 60px #000000;
+    margin: 0 auto;
+    justify-content: center;
+    nav-ytb{
+
+        width: 100%;
+        
+    }
+    video-player {
+      border-right: solid 24px #000000;
+      padding: 24px 24px 0 0;
+    }
+    right-side {
+      padding: 24px 24px 0 0;
+    }
+  }
+}

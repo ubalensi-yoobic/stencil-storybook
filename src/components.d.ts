@@ -14,7 +14,7 @@ export namespace Components {
         "type": string;
     }
     interface ComContainer {
-        "commentInfos": { avatar: string; author: string; content: string; like: string; dislike: string; posted: string; };
+        "commentInfos": { avatar: string; author: string; content: string; like: string; posted: string; };
     }
     interface ComplimentPerso {
         "adjective": string;
@@ -39,19 +39,14 @@ export namespace Components {
     }
     interface NavYtb {
     }
-    interface RightSide {
-        "Tags": string[];
-        "Videos": [
-    {
-      url: 'https://i.ytimg.com/vi/HGl75kurxok/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFTyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhmIGYoZjAP&rs=AOn4CLADTwOQRan2heX1fz9sfS6vjph2Dg',
-      title: 'Title',
-      author: 'Author',
-      views: '400k',
-      posted: '1 month',
-      tags: string[],
-      duration: '38:13:05',
+    interface PlayerPage {
+        "Comments": { avatar: string; author: string; content: string; like: string; dislike: string; posted: string; }[];
+        "VideoList": { url: string; title: string; author: string; views: string; posted: string; tags: string[]; duration: string; }[];
+        "videoAuthor": { name: string; subscribers: string; avatar: string; };
+        "videoPlayed": { title: string; url: string; like: string; };
     }
-  ];
+    interface RightSide {
+        "videoInfos": { url: string; title: string; author: string; views: string; posted: string; tags: string[]; duration: string; }[];
     }
     interface SliderChips {
         "tags": string[];
@@ -63,6 +58,9 @@ export namespace Components {
         "videoInfos": { url: string; title: string; author: string; views: string; posted: string; tags: string[]; duration: string; };
     }
     interface VideoPlayer {
+        "Comments": { avatar: string; author: string; content: string; like: string; dislike: string; posted: string; }[];
+        "videoAuthor": { name: string; subscribers: string; avatar: string; };
+        "videoPlayed": { title: string; url: string; like: string; };
     }
     interface YtbIcon {
         "color": string;
@@ -140,6 +138,12 @@ declare global {
         prototype: HTMLNavYtbElement;
         new (): HTMLNavYtbElement;
     };
+    interface HTMLPlayerPageElement extends Components.PlayerPage, HTMLStencilElement {
+    }
+    var HTMLPlayerPageElement: {
+        prototype: HTMLPlayerPageElement;
+        new (): HTMLPlayerPageElement;
+    };
     interface HTMLRightSideElement extends Components.RightSide, HTMLStencilElement {
     }
     var HTMLRightSideElement: {
@@ -199,6 +203,7 @@ declare global {
         "logo-ytb": HTMLLogoYtbElement;
         "my-rating": HTMLMyRatingElement;
         "nav-ytb": HTMLNavYtbElement;
+        "player-page": HTMLPlayerPageElement;
         "right-side": HTMLRightSideElement;
         "slider-chips": HTMLSliderChipsElement;
         "txt-ytb": HTMLTxtYtbElement;
@@ -218,7 +223,7 @@ declare namespace LocalJSX {
         "type"?: string;
     }
     interface ComContainer {
-        "commentInfos"?: { avatar: string; author: string; content: string; like: string; dislike: string; posted: string; };
+        "commentInfos"?: { avatar: string; author: string; content: string; like: string; posted: string; };
     }
     interface ComplimentPerso {
         "adjective"?: string;
@@ -243,19 +248,14 @@ declare namespace LocalJSX {
     }
     interface NavYtb {
     }
-    interface RightSide {
-        "Tags"?: string[];
-        "Videos"?: [
-    {
-      url: 'https://i.ytimg.com/vi/HGl75kurxok/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFTyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhmIGYoZjAP&rs=AOn4CLADTwOQRan2heX1fz9sfS6vjph2Dg',
-      title: 'Title',
-      author: 'Author',
-      views: '400k',
-      posted: '1 month',
-      tags: string[],
-      duration: '38:13:05',
+    interface PlayerPage {
+        "Comments"?: { avatar: string; author: string; content: string; like: string; dislike: string; posted: string; }[];
+        "VideoList"?: { url: string; title: string; author: string; views: string; posted: string; tags: string[]; duration: string; }[];
+        "videoAuthor"?: { name: string; subscribers: string; avatar: string; };
+        "videoPlayed"?: { title: string; url: string; like: string; };
     }
-  ];
+    interface RightSide {
+        "videoInfos"?: { url: string; title: string; author: string; views: string; posted: string; tags: string[]; duration: string; }[];
     }
     interface SliderChips {
         "onSelected"?: (event: SliderChipsCustomEvent<string>) => void;
@@ -268,6 +268,9 @@ declare namespace LocalJSX {
         "videoInfos"?: { url: string; title: string; author: string; views: string; posted: string; tags: string[]; duration: string; };
     }
     interface VideoPlayer {
+        "Comments"?: { avatar: string; author: string; content: string; like: string; dislike: string; posted: string; }[];
+        "videoAuthor"?: { name: string; subscribers: string; avatar: string; };
+        "videoPlayed"?: { title: string; url: string; like: string; };
     }
     interface YtbIcon {
         "color"?: string;
@@ -290,6 +293,7 @@ declare namespace LocalJSX {
         "logo-ytb": LogoYtb;
         "my-rating": MyRating;
         "nav-ytb": NavYtb;
+        "player-page": PlayerPage;
         "right-side": RightSide;
         "slider-chips": SliderChips;
         "txt-ytb": TxtYtb;
@@ -314,6 +318,7 @@ declare module "@stencil/core" {
             "logo-ytb": LocalJSX.LogoYtb & JSXBase.HTMLAttributes<HTMLLogoYtbElement>;
             "my-rating": LocalJSX.MyRating & JSXBase.HTMLAttributes<HTMLMyRatingElement>;
             "nav-ytb": LocalJSX.NavYtb & JSXBase.HTMLAttributes<HTMLNavYtbElement>;
+            "player-page": LocalJSX.PlayerPage & JSXBase.HTMLAttributes<HTMLPlayerPageElement>;
             "right-side": LocalJSX.RightSide & JSXBase.HTMLAttributes<HTMLRightSideElement>;
             "slider-chips": LocalJSX.SliderChips & JSXBase.HTMLAttributes<HTMLSliderChipsElement>;
             "txt-ytb": LocalJSX.TxtYtb & JSXBase.HTMLAttributes<HTMLTxtYtbElement>;

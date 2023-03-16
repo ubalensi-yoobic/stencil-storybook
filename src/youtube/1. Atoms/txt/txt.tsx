@@ -10,7 +10,7 @@ export class TextYTB {
 
   render() {
     return (
-      <p><slot/></p>
+      <span><slot/></span>
     );
   }
 }

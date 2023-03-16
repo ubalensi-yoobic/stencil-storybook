@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Atoms/Text',
-  component: 'text',
+  component: 'txt-ytb',
   parameters: {
     viewmode: 'story'
   }

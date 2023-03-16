@@ -7,7 +7,7 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class GhIcon {
   @Prop() type: string;
-  @Prop() color = 'red';
+  @Prop() color = 'white';
 
   render() {
     return <i class={this.type} color={this.color}></i>;

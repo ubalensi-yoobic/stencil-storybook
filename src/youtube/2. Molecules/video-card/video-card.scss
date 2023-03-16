@@ -7,11 +7,12 @@
     margin:8px;
   }
   .vinfo {
+    gap: 3px;
     margin-right: 8px;
-    height: 100%;
-    display: block;
+    max-height: 94px;
+    display:flex;
+    flex-direction: column;
     padding-right: 24px;
-    line-height: 6px;
-    align-items:baseline;
+    padding-top: 5px;
   }
 }

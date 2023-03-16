@@ -40,7 +40,7 @@ export class Slider {
         <div class={'tags-tab'} ref={(el) => (this.tagsTab = el as HTMLElement)} onScroll={() => this.atTheEnd()}>
           {this.tags.map((item, index) => (
             <button-ytb type={index === this.selectedTag ? 'r8 primary' : 'r8 secondary'} onClick={() => ((this.selectedTag = index), this.selected.emit(item))}>
-              {item}
+              <div>{item}</div>
             </button-ytb>
           ))}
         </div>

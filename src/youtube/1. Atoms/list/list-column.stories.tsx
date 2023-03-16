@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Atoms/ListColumn',
-  component: 'list-column',
+  component: 'list-col',
   parameters: {
     viewmode: 'story'
   }

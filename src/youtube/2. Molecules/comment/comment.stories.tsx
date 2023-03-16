@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 
 export default {
   title: 'Molecules/Comment',
-  component: 'navbar',
+  component: 'com-container',
   parameters: {
     viewmode: 'story'
   }

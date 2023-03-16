@@ -18,11 +18,14 @@
 
         }
         .tags-tab{
-        width: 100%;
         display: flex;
         flex-direction: row;
         overflow: scroll;
         gap: 10px;
+        width: max-content;
+        div{
+            width: max-content;
+        }
        }
       }
       
