@@ -10,7 +10,7 @@ export class SearchBarYTB {
     return (
       <div>
         <ytb-input type={'search'} placeholder={'Search'}></ytb-input>
-        <button-ytb type={'right-r16-solid-border'}>
+        <button-ytb type={'right-r16-solid-border'} shape="rectangle" color="grey" size="big">
           <ytb-icon type={'bi bi-search'} color={'white'}></ytb-icon>
         </button-ytb>
       </div>

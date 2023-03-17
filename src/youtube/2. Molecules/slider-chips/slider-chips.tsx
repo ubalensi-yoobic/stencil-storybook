@@ -33,19 +33,19 @@ export class Slider {
     return (
       <div class="wrapper">
         <div class={this.leftEnd ? 'no-arrow' : 'arrow'}>
-          <button-ytb type={'rond-transparent'} onClick={() => this.scrollTagsTab('left')}>
+          <button-ytb shape="round" color='transparent' size="big"  onClick={() => this.scrollTagsTab('left')}>
             <ytb-icon type={'bi bi-chevron-left'}></ytb-icon>
           </button-ytb>
         </div>
         <div class={'tags-tab'} ref={(el) => (this.tagsTab = el as HTMLElement)} onScroll={() => this.atTheEnd()}>
           {this.tags.map((item, index) => (
-            <button-ytb type={index === this.selectedTag ? 'r8 primary' : 'r8 secondary'} onClick={() => ((this.selectedTag = index), this.selected.emit(item))}>
+            <button-ytb type='r8' color={this.selectedTag === index ? "white":"grey"} shape="rectangle" size="medium" onClick={() => ((this.selectedTag = index), this.selected.emit(item))}>
               <div>{item}</div>
             </button-ytb>
           ))}
         </div>
         <div class={this.rightEnd ? 'no-arrow' : 'arrow'}>
-          <button-ytb type={'rond-transparent'} onClick={() => this.scrollTagsTab('right')}>
+          <button-ytb shape="round" color='transparent' size="big" onClick={() => this.scrollTagsTab('right')}>
             <ytb-icon type={'bi bi-chevron-right'}></ytb-icon>
           </button-ytb>
         </div>

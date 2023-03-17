@@ -30,17 +30,17 @@ export class CommentYTB {
           </div>
           <txt-ytb type={'title'}>{this.commentInfos.content}</txt-ytb>
           <div class={'reactions'}>
-            <button-ytb type={'rond-transparent'}style={{ paddingRight: '14px' }}>
+            <button-ytb shape="round" color="transparent" size="medium" style={{ paddingRight: '14px' }}>
               <ytb-icon type={'bi bi-hand-thumbs-down'} ></ytb-icon>
-              {this.commentInfos.like}
             </button-ytb>
-            <button-ytb type={'rond-transparent'}>
+            <span color='#fffff'>{this.commentInfos.like}</span>
+            <button-ytb shape="round" color="transparent" size="medium">
               <ytb-icon type={'bi bi-hand-thumbs-up'}></ytb-icon>
             </button-ytb>
-            <button-ytb type={'rond-transparent'}>
+            <button-ytb shape="round" color="transparent" size="medium">
               <ytb-icon type={'bi bi-heart'}></ytb-icon>
             </button-ytb>
-            <button-ytb type={'r8 secondary'} style={{ backgroundColor: 'transparent', padding: '2px' }}>
+            <button-ytb type={'r16'} shape="rectangle" color="transparent" size="medium" style={{padding: '2px' }}>
               <txt-ytb type={'title'}>Reply</txt-ytb>
             </button-ytb>
           </div>

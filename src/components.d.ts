@@ -5,12 +5,17 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { TColor, TShape, TSize } from "./youtube/1. Atoms/button/button";
+export { TColor, TShape, TSize } from "./youtube/1. Atoms/button/button";
 export namespace Components {
     interface BtnGeneral {
         "color": string;
         "label": string;
     }
     interface ButtonYtb {
+        "color": TColor;
+        "shape": TShape;
+        "size": TSize;
         "type": string;
     }
     interface ComContainer {
@@ -220,6 +225,9 @@ declare namespace LocalJSX {
         "label"?: string;
     }
     interface ButtonYtb {
+        "color"?: TColor;
+        "shape"?: TShape;
+        "size"?: TSize;
         "type"?: string;
     }
     interface ComContainer {
