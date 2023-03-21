@@ -33,7 +33,7 @@ export class Slider {
     return (
       <div class="wrapper">
         <div class={this.leftEnd ? 'no-arrow' : 'arrow'}>
-          <button-ytb shape="round" color='transparent' size="big"  onClick={() => this.scrollTagsTab('left')}>
+          <button-ytb shape="round" color='transparent' size="big" onClick={() => this.scrollTagsTab('left')}>
             <ytb-icon type={'bi bi-chevron-left'}></ytb-icon>
           </button-ytb>
         </div>

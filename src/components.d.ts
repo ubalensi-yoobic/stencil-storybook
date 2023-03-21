@@ -6,7 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { TColor, TShape, TSize } from "./youtube/1. Atoms/button/button";
+import { TBold, TColorText } from "./youtube/1. Atoms/txt/txt";
 export { TColor, TShape, TSize } from "./youtube/1. Atoms/button/button";
+export { TBold, TColorText } from "./youtube/1. Atoms/txt/txt";
 export namespace Components {
     interface BtnGeneral {
         "color": string;
@@ -57,7 +59,8 @@ export namespace Components {
         "tags": string[];
     }
     interface TxtYtb {
-        "type": string;
+        "bold": TBold;
+        "color": TColorText;
     }
     interface VideoCard {
         "videoInfos": { url: string; title: string; author: string; views: string; posted: string; tags: string[]; duration: string; };
@@ -270,7 +273,8 @@ declare namespace LocalJSX {
         "tags"?: string[];
     }
     interface TxtYtb {
-        "type"?: string;
+        "bold"?: TBold;
+        "color"?: TColorText;
     }
     interface VideoCard {
         "videoInfos"?: { url: string; title: string; author: string; views: string; posted: string; tags: string[]; duration: string; };

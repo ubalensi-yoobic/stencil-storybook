@@ -1,5 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
-
+import { Component, h, Host, Prop } from '@stencil/core';
 @Component({
   tag: 'ytb-input',
   styleUrl: 'input.scss',
@@ -7,13 +6,13 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class InputYTB {
   @Prop() placeholder: string;
-  @Prop() type: string;
+  @Prop({ reflect: true }) type: string;
 
   render() {
     return (
-      <div class={this.type}>
+      <Host>
         <input placeholder={this.placeholder}></input>
-      </div>
+      </Host>
     );
   }
 }

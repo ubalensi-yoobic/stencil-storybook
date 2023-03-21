@@ -48,49 +48,49 @@ export class PlayerVideoYTB {
           </div>
         </div>
         <div class={'video-info'} style={{ marginTop: '12px' }}>
-          <txt-ytb type={'title'} style={{ fontSize: '20px' }}>
+          <txt-ytb bold={'bold'} color="white"  style={{ fontSize: '20px' }}>
             {this.videoPlayed.title}
           </txt-ytb>
           <div class={'details'}>
             <div class={'author-container'}>
               <img-ytb url={this.videoAuthor.avatar}></img-ytb>
               <div class={'author-info'}>
-                <txt-ytb type={'title'}>{this.videoAuthor.name}</txt-ytb>
-                <txt-ytb type={'normal'}>{this.videoAuthor.subscribers}</txt-ytb>
+                <txt-ytb bold={'bold'} color="white">{this.videoAuthor.name}</txt-ytb>
+                <txt-ytb bold={'normal'} color="grey">{this.videoAuthor.subscribers}</txt-ytb>
               </div>
-              <button-ytb type={'r16 primary'} style={{ margin: '0 10px' }}>
+              <button-ytb type={'r16'} shape="rectangle" size="medium-plus" color="white" style={{ margin: '0 10px' }}>
                 Subscribe
               </button-ytb>
             </div>
             <div class={'video-reaction'}>
               <div class={'likes-button'}>
-                <button-ytb type={'left-r16-right-border'}>
+                <button-ytb type={'left-r16-right-border'} shape="rectangle" size="medium-plus" color="grey">
                   <ytb-icon type={'bi bi-hand-thumbs-up'}></ytb-icon>
                   {this.videoPlayed.like}
                 </button-ytb>
-                <button-ytb type={'right-r16-left-border'}>
+                <button-ytb type={'right-r16-left-border'} shape="rectangle" size="medium-plus" color="grey">
                   <ytb-icon type={'bi bi-hand-thumbs-down'}></ytb-icon>
                 </button-ytb>
               </div>
-              <button-ytb type={'r16 secondary'} >
+              <button-ytb type={'r16'} shape="rectangle" size="medium-plus" color="black">
                 <ytb-icon type={'bi bi-reply'}></ytb-icon>Share
               </button-ytb>
-              <button-ytb type={'r16 secondary'}>
+              <button-ytb type={'r16'} shape="rectangle" size="medium-plus" color="black">
                 <ytb-icon type={'bi bi-download'}></ytb-icon>Download
               </button-ytb>
-              <button-ytb type={'r16 secondary'}>
-                <ytb-icon type={'bi bi-piggy-bank'}></ytb-icon>Tanks
+              <button-ytb type={'r16'} shape="rectangle" size="medium-plus" color="black">
+                <ytb-icon type={'bi bi-piggy-bank'}></ytb-icon>Thanks
               </button-ytb>
-              <button-ytb type={'r16 secondary'}>
+              <button-ytb type={'r16 secondary'} shape="rectangle" size="medium-plus" color="black">
                 <ytb-icon type={'bi bi-scissors'}></ytb-icon>Clip
               </button-ytb>
-              <button-ytb type={'r16 secondary'}>
+              <button-ytb type={'r16'} shape="rectangle" size="medium-plus" color="black">
                 <ytb-icon type={'bi bi-three-dots'}></ytb-icon>
               </button-ytb>
             </div>
           </div>
           <div class={'description'}>
-            <button-ytb type={'r8 secondary'}>
+            <button-ytb type={'r8'} shape="rectangle" size="big" color="grey" style={{ padding: '0 5px', height: 'max-content', width: '100%' }}>
               <div class={'more'}>
                 <div>1,2 M de vues il y a 8 ans</div>
                 <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
@@ -104,11 +104,11 @@ export class PlayerVideoYTB {
         <div class={'comments-container'}>
           <div class={'com-number-container'}>
             <div class={'com-number'}>
-              {this.Comments.length} <txt-ytb type={'title'}>Comments</txt-ytb>
+              {this.Comments.length} <txt-ytb bold={'normal'} color="white">Comments</txt-ytb>
             </div>
             <div class={'filter-com'}>
               <ytb-icon type={'bi bi-filter-left'}></ytb-icon>
-              <txt-ytb type={'title'}>Sort by</txt-ytb>
+              <txt-ytb bold={'normal'} color="white">Sort by</txt-ytb>
             </div>
           </div>
           <div class={'add-com'}>

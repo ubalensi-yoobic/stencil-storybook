@@ -67,6 +67,10 @@ export const Button = () => (
       <button-ytb type={'r16'} shape="rectangle" color="white" size="big">
         Primary radius 16
       </button-ytb>
+      <button-ytb type={'r16'} shape="rectangle" size="medium-plus" color="black">
+        <ytb-icon type={'bi bi-reply'}></ytb-icon>
+        <span>Share</span>
+      </button-ytb>
     </div>
     <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
       <button-ytb type={'right-r16-solid-border'} shape="rectangle" color="grey" size="big">

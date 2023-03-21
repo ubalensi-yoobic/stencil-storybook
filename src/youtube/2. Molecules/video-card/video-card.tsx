@@ -20,16 +20,19 @@ export class VideoCardYTB {
       <Host>
         <img-annotated url={this.videoInfos.url} time={this.videoInfos.duration}></img-annotated>
         <div class="vinfo">
-          <txt-ytb type={'title'} style={{ fontSize: '14px', fontWeight: '550'}}>
+          <txt-ytb bold={'bold'}  color="white" style={{ fontSize: '14px', fontWeight: '550'}}>
             {this.videoInfos.title}
           </txt-ytb>
-          <txt-ytb type={'normal'} style={{ fontSize: '12px', fontWeight: '500' }}>
+          <txt-ytb bold={'normal'} color="grey" style={{ fontSize: '12px', fontWeight: '500' }}>
             {this.videoInfos.author}
           </txt-ytb>
-          <txt-ytb type={'normal'} style={{ fontSize: '12px',fontWeight: '500' }}>
+          <txt-ytb bold={'normal'} color="grey" style={{ fontSize: '12px',fontWeight: '500' }}>
             {this.videoInfos.views}views * {this.videoInfos.posted} ago
           </txt-ytb>
         </div>
+        <button-ytb color='transparent' shape='rectangle' size='small'>
+            <ytb-icon type="bi bi-three-dots-vertical" style={{ fontSize: '18px' }} color='white'></ytb-icon>
+          </button-ytb>
       </Host>
     );
   }

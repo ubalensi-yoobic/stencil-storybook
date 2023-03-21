@@ -2,16 +2,24 @@
   display: block;
   font-family: 'Roboto', 'Arial', sans-serif;
   background-color: transparent;
-
+  margin: 0;
 }
 
-:host([type='title']) {
+/*color = 'white' | 'black' | 'grey'*/
+:host([color='white']) {
   color: white;
-  font-weight: 500;
-  margin:0;
 }
-:host([type='normal']) {
+:host([color='black']) {
+  color: black;
+}
+:host([color='grey']) {
   color: rgb(119, 116, 116);
-  font-weight: 400;
-  margin:0;
+}
+/* bold = 'bold' | 'normal'*/
+:host([bold='bold']) {
+  font-weight: bold;
+
+}
+:host([bold='normal']) {
+  font-weight: normal;
 }

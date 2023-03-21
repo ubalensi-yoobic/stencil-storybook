@@ -10,7 +10,11 @@ export default {
 
 export const Text = () => (
   <div>
-    <txt-ytb type={'title'}>Amelie soundtrack</txt-ytb>
-    <txt-ytb type={'normal'}>authorX</txt-ytb>
+    <txt-ytb bold={'bold'} color="white">Lorem ipsum</txt-ytb>
+    <txt-ytb bold={'bold'} color="black">Lorem ipsum</txt-ytb>
+    <txt-ytb bold={'bold'} color="grey">Lorem ipsum</txt-ytb>
+    <txt-ytb bold={'normal'} color="white">Lorem ipsum</txt-ytb>
+    <txt-ytb bold={'normal'} color="black">Lorem ipsum</txt-ytb>
+    <txt-ytb bold={'normal'} color="grey">Lorem ipsum</txt-ytb>
   </div>
   );

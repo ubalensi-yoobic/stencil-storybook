@@ -6,6 +6,12 @@
   img-annotated{
     margin:8px;
   }
+  ytb-icon{
+    opacity: 0;
+  }
+  :hover ytb-icon {
+    opacity: 1;
+  }
   .vinfo {
     gap: 3px;
     margin-right: 8px;
